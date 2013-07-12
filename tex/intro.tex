@@ -1,16 +1,28 @@
 \section{Introduction}
   The packet-scale congestion control is a newly proposed framework for 
   congestion control that promises to scale up the state of the art in 
-  ultra-high speed congestion control by several orders of magnitude.
+  ultra-high speed congestion control by several orders of magnitude 
+  \cite{Konda-infocom09}. This paradignm uses short probing-streams to probe 
+  for available bandwidth at fine timescales by carefully controlling the 
+  inter-packet spacings.
 
-  This paper is a continuation of the analysis of the impact of cross traffic 
-  burstiness in the packet-scale paradigm \cite{Lovewell2011-Noise-TR}. We 
-  consider two scenarios 
-  for the cross traffic. In one scenario, the cross traffic parameters are 
-  constant and the RTT is treated as a random variable. In the second 
-  scenario, the RTT is held constant throughout the connection and cross 
-  traffic parameters are treated as random variables.
+  The excellent adaptability of the paradigm to dynamically varying 
+  bandwidth raises concern about its sensitivity to transient short-scale 
+  burstiness in the cross traffic encountered on congested links. Thus, in 
+  this paper, we continue the work done in \cite{Lovewell2011-Noise-TR} where 
+  a simple periodic on-off model is used for the cross traffic. We extend the 
+  analysis done in \cite{Lovewell2011-Noise-TR} by considering two scenarios.
+  In one scenario, the cross traffic parameters are held constant and the RTT 
+  of the Rapid flow is treated as a random variable. In the second 
+  scenario, the RTT of the Rapid flow is held constant throughout the 
+  connection and the cross traffic parameters are treated as random variables. 
+  It is important to consider random RTTs and random cross traffic parameters 
+  because it better approximates the scenarios found in real networks.
 
-  Motivation
-
-  In the rest of this paper, ....
+  In the rest of this paper, we develop the analysis for large-scale and 
+  small-scale burts in sections II and III respectively. In section IV we use 
+  the derived equations for the Rapid throughput to study the performace of 
+  the paradigm under different conditions and settings when the RTT is treated 
+  as a uniform random variable. In section V, we treat the parameters that 
+  define the on-off cross traffic as random variables and study the 
+  performance of the parameters. We conclude in section VI.
