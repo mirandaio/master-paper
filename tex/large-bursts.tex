@@ -8,7 +8,8 @@
   data during $T_{on}$ and $C$ is the transmission capacity of the bottleneck 
   link.
   \begin{figure}[hbp]
-    \includegraphics[scale=0.35]{img/cross-traffic.png}
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/cross-traffic.png}
     \caption{The on-off cross traffic model}
     \label{cross-traffic}
   \end{figure}
@@ -18,8 +19,9 @@
   \ref{large-burst} shows the interaction between Rapid throughput and a 
   large-scale burst on-off cross traffic, where $D$ is the queue drain time.
   \begin{figure}[hbp]
-    \includegraphics[scale=0.5]{img/large-burst.png}
-    \caption{Rapid throughput and on-off cross traffic}
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/large-burst.pdf}
+    \caption{Rapid send rate and on-off cross traffic}
     \label{large-burst}
   \end{figure}
   
@@ -47,6 +49,7 @@
   where $R_{avg}$ is the average sending rate of the cross traffic:
   \begin{equation}
     R_{avg} = \frac{R_{on} T_{on}}{T_{on} + T_{off}}
+    \label{ravg}
   \end{equation}
 
   Figure \ref{large-burst} is one of the 16 different cases of large-scale 
