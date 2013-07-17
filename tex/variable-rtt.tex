@@ -76,7 +76,7 @@
     $\frac{R_{avg}}{C}$. The different curves correspond to 4 different 
     values of $(T_{on}, T_{off})$ and 2 values of 
     $\tau$ ($\tau - \eta = 1ms$). Again, the expected utilization is slightly 
-    better than the worst case utilization and the results are simulart as the 
+    better than the worst case utilization and the results are similar to the 
     ones in \cite{Lovewell2011-Noise-TR}:
     \begin{itemize}
       \item The expected utilization decreases with increase in 
@@ -84,7 +84,7 @@
       $\frac{T_{on}}{T_{off}}$.
       \item For a given combination of $T_{on}$ and $T_{off}$, Rapid performs 
       better when bursts are "small-scale" ($\tau$, $\eta$ are sufficiently 
-      larger thatn $T_{on}$, $T_{off}$). As long as the bursts are 
+      larger than $T_{on}$, $T_{off}$). As long as the bursts are 
       small-scale, the value of $\tau$ dpes not influence Rapid performance 
       much. Using large value of $\tau$ and $\eta$ can help ensure the 
       bursts are relatively "small" in scale and Rapid performs well.
@@ -97,6 +97,22 @@
     \end{figure}
 
   \subsection{Role of $\frac{T_{on}}{T_{off}}$}
+    Figure \ref{rtttontoff} plots the expected utilization as a function of 
+    $\frac{Ton}{Toff}$. In these plots, $T_{on} = 250ms$, $100ms$ and 
+    $T_{off}$ is varied to get different values for the ratio 
+    $\frac{T_{on}}{T_{off}}$. $C = 1Gbps$ and the different curves correspond 
+    to different values of $\frac{R_{avg}}{C}$. The expected utilization is 
+    slightly better than the worst case utilization and the results are 
+    similar to the ones found in \cite{Lovewell2011-Noise-TR}:
+    \begin{itemize}
+      \item The link utilization achieved increases with the ratio 
+      $\frac{T_{on}}{T_{off}}$. The expected utilization flattens out beyond 
+      the ratio of $\frac{T_{on}}{T_{off}} = 4$.
+      \item For a given $\frac{T_{on}}{T_{off}}$, the impact of the 
+      individual choice of $T_{on}$ is minimal. The timescale of cross traffic 
+      burstiness does not significantly influence Rapid's performance, but the 
+      relative durations of burst and idle periods do.
+    \end{itemize}
     \begin{figure}[h]
       \centering
       \includegraphics[width=0.9\textwidth]{img/rtttontoff.pdf}
