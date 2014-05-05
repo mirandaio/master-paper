@@ -1,0 +1,711 @@
+\section{Derivation of Cases}
+
+\subsection{Case 1}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & < & T_{on} - \eta \\
+    RTT & < & T_{off} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & R_{on} RTT + \frac{\eta R_{on}}{2} \\
+    R & = & C - R_{avg} \frac{2T_{on} + 2D + \tau - \eta}{2T_{on}}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 2}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & < & T_{on} \\
+    RTT & \ge & T_{on} - \eta \\
+    RTT & < & T_{on} + T_{off} - \eta \\
+    RTT & < & T_{off} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & R_{on} RTT + \frac{(R_{on} + R_{M2} - C + R_{on})(T_{on} - RTT)}
+    {2} \\ 
+    R & = & C - R_{avg} \frac{2T_{on} + 2D + \tau - \eta}{2T_{on}} \\
+    R_{M2} & = & C + \frac{R_{on}(RTT - T_{on})}{\eta} \\
+  \end{IEEEeqnarray*}
+
+\subsection{Case 3}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & \ge & T_{on} \\
+    RTT & < & T_{on} + T_{off} - \eta \\
+    RTT & < & T_{off} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & R_{on}T_{on} \\
+    R & = & C - R_{avg}\frac{2T_{on} + 2D + \tau - \eta}{2T_{on}}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 4}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & < & T_{on} - \eta \\
+    RTT & < & T_{off} - D \\
+    RTT & \ge & T_{on} - D - \tau \\
+    RTT & < & T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{(R_{on} + R_{M1} - C + R_{on})(RTT + D + \tau - T_{off})}{2}
+    + R_{on}(T_{off} -D - \tau) + \frac{\eta R_{on}}{2} \\
+    R & = & C - R_{avg}\frac{2T_{on} + 2D + \tau - \eta}{2T_{on}} \\
+    R_{M1} & = & C + \frac{R_{on}(T_{off} - \tau - RTT - D)}{\tau}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 5}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & < & T_{on} \\
+    RTT & \ge & T_{on} - \eta \\
+    RTT & < & T_{on} + T_{off} - \eta \\
+    RTT & < & T_{off} - D \\
+    RTT & \ge & T_{off} - D - \tau \\
+    RTT & < & T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{(2R_{on} + R_{M1} - C)(RTT + D + \tau - T_{off})}
+    {2} + R_{on}(T_{off} - D - \tau)  \\
+    && + \frac{(2R_{on} + R_{M2} - C)(T_{on} - RTT)}{2} \\
+    R & = & C - R_{avg}\frac{2T_{on} + 2D + \tau - \eta}{2T_{on}} \\
+    R_{M1} & = & C + \frac{R_{on}(T_{off} - \tau - RTT - D)}{\tau} \\
+    R_{M2} & = & C + \frac{R_{on}(RTT - T_{on})}{\eta}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 6}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & \ge & T_{on} \\
+    RTT & < & T_{on} + T_{off} - \eta \\
+    RTT & < & T_{off} - D \\
+    RTT & \ge & T_{off} - D - \tau \\
+    RTT & < & T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{(2R_{on} + R_{M1} - C)(RTT + D + \tau - T_{off})}{2} + 
+    R_{on}(T_{off} + T_{on} - RTT - D - \tau) \\
+    R & = & C - R_{avg}\frac{2T_{on} + 2D + \tau - \eta}{2T_{on}} \\
+    R_{M1} & = & C + \frac{R_{on}(T_{off} - \tau - RTT - D)}{\tau}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 7}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & < & T_{on} - \eta \\
+    RTT & \ge & T_{off} - D \\
+    RTT & < & T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{\tau R_{on}}{2} + R_{on}(T_{off} - D - \tau) + \frac{\eta 
+    R_{on}}{2} \\
+    R & = & C - R_{avg}\frac{2T_{on} + 2D + \tau - \eta}{2T_{on}}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 8}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & < & T_{on} \\
+    RTT & \ge & T_{on} - \eta \\
+    RTT & < & T_{on} + T_{off} - \eta \\
+    RTT & \ge & T_{off} - D \\
+    RTT & < & T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{\tau R_{on}}{2} + R_{on}(T_{off} - D - \tau) +
+    \frac{(2R_{on} + R_{M2} - C)(T_{on} - RTT)}{2} \\
+    R & = & C - R_{avg}\frac{2T_{on} + 2D + \tau - \eta}{2T_{on}} \\
+    R_{M2} & = & C + \frac{R_{on} (RTT - T_{on})}{\eta}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 9}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & \ge & T_{on} \\
+    RTT & < & T_{on} + T_{off} - \eta \\
+    RTT & \ge & T_{off} - D \\
+    RTT & < & T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{\tau R_{on}}{2} + R_{on}(T_{off} + T_{on} - RTT - D - \tau)\\
+    R & = & C - R_{avg}\frac{2T_{on} + 2D + \tau - \eta}{2T_{on}}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 10}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & \ge & T_{on} \\
+    RTT & < & T_{on} + T_{off} - \eta \\
+    RTT & \ge & T_{off} - D \\
+    RTT & < & T_{off} + T_{on} - D \\
+    RTT & \ge & T_{off} + T_{on} - D - \tau \\
+    RTT & < & 2T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{(T_{off} + T_{on} - RTT - D)(R_{M2} - C + R_{on})}{2} \\
+    R & = & C - R_{avg}\frac{2T_{on} + 2D + \tau - \eta}{2T_{on}} \\
+    R_{M2} & = & C + \frac{R_{on}(T_{off} + T_{on} - \tau - RTT - D)}{\tau}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 11}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & \ge & T_{on} \\
+    RTT & < & T_{on} + T_{off} \\
+    RTT & \ge & T_{on} + T_{off} - \eta \\
+    RTT & < & 2T_{on} + T_{off} - \eta \\
+    RTT & \ge & T_{off} - D \\
+    RTT & < & T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{(RTT + \eta - T_{on} - T_{off})(R_{M1} - C + R_{on})}{2} + 
+    \frac{\tau R_{on}}{2} + R_{on} (T_{off} + T_{on} - RTT - D - \tau) \\
+    R & = & C - R_{avg}\frac{2T_{on} + 2D + \tau - \eta}{2T_{on}} \\
+    R_{M1} & = & C + \frac{R_{on}(RTT - T_{off} - T_{on})}{\eta}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 12}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & \ge & T_{on} \\
+    RTT & < & T_{on} + T_{off} \\
+    RTT & \ge & T_{on} + T_{off} - \eta \\
+    RTT & < & 2T_{on} + T_{off} - \eta \\
+    RTT & \ge & T_{off} - D \\
+    RTT & < & T_{off} + T_{on} - D \\
+    RTT & \ge & T_{off} + T_{on} - D - \tau \\
+    RTT & < & 2T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{(RTT + \eta - T_{on} - T_{off})(R_{M1} - C + R_{on})}{2} + 
+    \frac{(T_{off} + T_{on} - RTT - D)(R_{M2} - C + R_{on})}{2} \\
+    R & = & C - R_{avg}\frac{2T_{on} + 2D + \tau - \eta}{2T_{on}} \\
+    R_{M1} & = & C + \frac{R_{on} (RTT - T_{off} - T_{on})}{\eta} \\
+    R_{M2} & = & C + \frac{R_{on} (T_{off} + T_{on} - \tau - RTT - D)}{\tau}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 13}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & \ge & T_{on} \\
+    RTT & < & T_{on} + T_{off} \\
+    RTT & \ge & T_{on} + T_{off} - \eta \\
+    RTT & < & 2T_{on} + T_{off} - \eta \\
+    RTT & \ge & T_{off} + T_{on} - D \\
+    RTT & < & 2T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{(RTT + \eta - T_{on} - T_{off})(R_{M1} - C + R_{on})}{2} \\
+    R & = & C - R_{avg}\frac{2T_{on} + 2D + \tau - \eta}{2T_{on}} \\
+    R_{M1} & = & C + \frac{R_{on}(RTT - T_{off} - T_{on})}{\eta}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 14}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & < & T_{on} \\
+    RTT & \ge & T_{on} + T_{off} - \eta \\
+    RTT & < & 2T_{on} + T_{off} - \eta \\
+    RTT & \ge & T_{off} - D \\
+    RTT & < & T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{(RTT + \eta - T_{on} - T_{off})(R_{M1} - C + R_{on})}{2} + 
+    \frac{\tau R_{on}}{2} + R_{on}(T_{off} - D - \tau) \\ 
+    && + \frac{(2R_{on} + R_{M2} - C)(T_{on} - RTT)}{2} \\
+    R & = & C - R_{avg}\frac{2T_{on} + 2D + \tau - \eta}{2T_{on}} \\
+    R_{M1} & = & C + \frac{R_{on}(RTT - T_{off} - T_{on})}{\eta} \\
+    R_{M2} & = & C + \frac{R_{on}(RTT - T_{on})}{\eta}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 15}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & \ge & T_{on} \\
+    RTT & < & T_{on} + T_{off} + \eta \\
+    RTT & < & T_{off} - D \\
+    RTT & \ge & T_{off} + T_{on} - D - \tau \\
+    RTT & < & 2T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{(R_{M1} + R_{M2} - 2C + 2R_{on})T_{on}}{2} \\
+    R & = & C - R_{avg}\frac{2T_{on} + 2D + \tau - \eta}{2T_{on}} \\
+    R_{M1} & = & C + \frac{R_{on}(T_{off} - \tau - D - RTT)}{\tau} \\
+    R_{M2} & = & C + \frac{R_{on}(T_{off} + T_{on} - \tau - D - RTT)}{\tau}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 16}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & \ge & T_{on} \\
+    RTT & < & T_{on} + T_{off} \\
+    RTT & \ge & 2T_{on} + T_{off} - \eta \\
+    RTT & < & 2T_{on} + 2T_{off} - \eta \\
+    RTT & \ge & T_{off} + T_{on} - D \\
+    RTT & < & 2T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{(R_{M1} + R_{M2} - 2C + 2R_{on})T_{on}}{2} \\
+    R & = & C - R_{avg}\frac{2T_{on} + 2D + \tau - \eta}{2T_{on}} \\
+    R_{M1} & = & C + \frac{R_{on}(RTT - T_{off} - T_{on})}{\eta} \\
+    R_{M2} & = & C + \frac{R_{on}(RTT - T_{off} - 2T_{on})}{\eta}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 17}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & < & T_{on} \\
+    RTT & < & T_{off} - D \\
+    RTT & \ge & T_{off} - D - \tau \\
+    RTT & < & T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{R_{M1} - C + 2R_{on})(RTT + D + \tau - T_{off})}{2} +
+    R_{on}(T_{off} - D - \tau) \\ 
+    && + \frac{(R_{on} + R_{M2} - C + R_{on})*T_{on} - RTT)}{2} \\
+    R & = & \left (\frac{C + R_L}{2} \right ) \left (\frac{T_{on} + D + \tau}
+    {T_{on} + T_{off}} \right ) + C \left (\frac{T_{off} - D - \tau}
+    {T_{on} + T_{off}} \right ) \\
+    R_{M1} & = & \frac{D R_L - C RTT + R_L RTT + C T_{off} - R_L T_{off} 
+    R_L \tau - C D}{\tau} \\
+    R_{M2} & = & C + \frac{R_{on}(RTT -T_{on})}{\eta} \\
+    R_L & = & C - \frac{R_{on}(T_{on} + D)}{\eta}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 18}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & < & T_{on} \\
+    RTT & \ge & T_{off} - D \\
+    RTT & < & T_{on} + T_{off} - D \\
+    RTT & < & T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{(R_{M1} -2C + 2R_{on} + R_L)(RTT + D - T_{off})}{2} + 
+    \frac{(R_L - C + 2R_{on})\tau}{2} \\ 
+    && + R_{on}(T_{off} - D - \tau) + 
+    \frac{(2R_{on} + R_{M2} - C)(T_{on} - RTT)}{2} \\ 
+    R & = & \left (\frac{C + R_L}{2} \right ) \left (\frac{T_{on} + D + \tau}
+    {T_{on} + T_{off}} \right ) + C \left (\frac{T_{off} - D - \tau}
+    {T_{on} + T_{off}} \right ) \\
+    R_{M1} & = & C + \frac{R_{on}(RTT - T_{off} - T_{on})}{\eta} \\
+    R_{M2} & = & C + \frac{R_{on} (RTT - T_{on})}{\eta} \\
+    R_L & = & C - \frac{R_{on}(T_{on} + D)}{\eta}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 19}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & \ge & T_{on} \\
+    RTT & < & T_{off} - D \\
+    RTT & < & T_{off} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & R_{on} T_{on} \\
+    R & = & \left (\frac{C + R_L}{2} \right ) \left (\frac{T_{on} + D + \tau}
+    {T_{on} + T_{off}} \right ) + C \left (\frac{T_{off} - D - \tau}
+    {T_{on} + T_{off}} \right ) \\
+    R_L & = & C - \frac{R_{on}(T_{on} + D)}{\eta}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 20}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & \ge & T_{on} \\
+    RTT & < & T_{on} + T_{off} \\
+    RTT & \ge & T_{off} - D \\
+    RTT & < & T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{(R_{M1} - 2C + R_L + 2R_{on})(RTT + D - T_{off})}{2} +
+    \frac{(R_L - C + 2R_{on})\tau}{2} \\
+    && + R_{on}(T_{off} + T_{on} - RTT - D - \tau) \\
+    R & = & \left (\frac{C + R_L}{2} \right ) \left (\frac{T_{on} + D + \tau}
+    {T_{on} + T_{off}} \right ) + C \left (\frac{T_{off} - D - \tau}
+    {T_{on} + T_{off}} \right ) \\
+    R_{M1} & = & C + \frac{R_{on}(RTT - T_{off} - T_{on})}{\eta} \\
+    R_L & = & C - \frac{R_{on}(T_{on} + D)}{\eta}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 21}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & < & T_{on} - \eta \\
+    RTT & < & T_{off} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & R_{on} RTT + \frac{\eta R_{on}}{2} \\
+    R & = & C - R_{avg} \frac{2T_{on} + 2D + \tau - \eta}{2T_{on}}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 22}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & < & T_{on} \\
+    RTT & \ge & T_{on} - \eta \\
+    RTT & < & T_{on} + T_{off} - \eta \\
+    RTT & < & T_{off} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & R_{on} RTT + \frac{(R_{on} + R_{M2} - C + R_{on})(T_{on} - RTT)}
+    {2} \\ 
+    R & = & C - R_{avg} \frac{2T_{on} + 2D + \tau - \eta}{2T_{on}} \\
+    R_{M2} & = & C + \frac{R_{on}(RTT - T_{on})}{\eta} \\
+  \end{IEEEeqnarray*}
+
+\subsection{Case 23}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & \ge & T_{on} \\
+    RTT & < & T_{on} + T_{off} - \eta \\
+    RTT & < & T_{off} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & R_{on}T_{on} \\
+    R & = & C - R_{avg}\frac{2T_{on} + 2D + \tau - \eta}{2T_{on}}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 24}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & < & T_{on} - \eta \\
+    RTT & < & T_{off} - D \\
+    RTT & \ge & T_{on} - D - \tau \\
+    RTT & < & T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{(R_{on} + R_{M1} - C + R_{on})(RTT + D + \tau - T_{off})}{2}
+    + R_{on}(T_{off} -D - \tau) + \frac{\eta R_{on}}{2} \\
+    R & = & C - R_{avg}\frac{2T_{on} + 2D + \tau - \eta}{2T_{on}} \\
+    R_{M1} & = & C + \frac{R_{on}(T_{off} - \tau - RTT - D)}{\tau}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 25}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & < & T_{on} \\
+    RTT & \ge & T_{on} - \eta \\
+    RTT & < & T_{on} + T_{off} - \eta \\
+    RTT & < & T_{off} - D \\
+    RTT & \ge & T_{off} - D - \tau \\
+    RTT & < & T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{(2R_{on} + R_{M1} - C)(RTT + D + \tau - T_{off})}
+    {2} + R_{on}(T_{off} - D - \tau)  \\
+    && + \frac{(2R_{on} + R_{M2} - C)(T_{on} - RTT)}{2} \\
+    R & = & C - R_{avg}\frac{2T_{on} + 2D + \tau - \eta}{2T_{on}} \\
+    R_{M1} & = & C + \frac{R_{on}(T_{off} - \tau - RTT - D)}{\tau} \\
+    R_{M2} & = & C + \frac{R_{on}(RTT - T_{on})}{\eta}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 26}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & \ge & T_{on} \\
+    RTT & < & T_{on} + T_{off} - \eta \\
+    RTT & < & T_{off} - D \\
+    RTT & \ge & T_{off} - D - \tau \\
+    RTT & < & T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{(2R_{on} + R_{M1} - C)(RTT + D + \tau - T_{off})}{2} + 
+    R_{on}(T_{off} + T_{on} - RTT - D - \tau) \\
+    R & = & C - R_{avg}\frac{2T_{on} + 2D + \tau - \eta}{2T_{on}} \\
+    R_{M1} & = & C + \frac{R_{on}(T_{off} - \tau - RTT - D)}{\tau}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 27}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & < & T_{on} - \eta \\
+    RTT & \ge & T_{off} - D \\
+    RTT & < & T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{\tau R_{on}}{2} + R_{on}(T_{off} - D - \tau) + \frac{\eta 
+    R_{on}}{2} \\
+    R & = & C - R_{avg}\frac{2T_{on} + 2D + \tau - \eta}{2T_{on}}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 28}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & < & T_{on} \\
+    RTT & \ge & T_{on} - \eta \\
+    RTT & < & T_{on} + T_{off} - \eta \\
+    RTT & \ge & T_{off} - D \\
+    RTT & < & T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{\tau R_{on}}{2} + R_{on}(T_{off} - D - \tau) +
+    \frac{(2R_{on} + R_{M2} - C)(T_{on} - RTT)}{2} \\
+    R & = & C - R_{avg}\frac{2T_{on} + 2D + \tau - \eta}{2T_{on}} \\
+    R_{M2} & = & C + \frac{R_{on} (RTT - T_{on})}{\eta}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 29}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & \ge & T_{on} \\
+    RTT & < & T_{on} + T_{off} - \eta \\
+    RTT & \ge & T_{off} - D \\
+    RTT & < & T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{\tau R_{on}}{2} + R_{on}(T_{off} + T_{on} - RTT - D - \tau)\\
+    R & = & C - R_{avg}\frac{2T_{on} + 2D + \tau - \eta}{2T_{on}}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 30}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & \ge & T_{on} \\
+    RTT & < & T_{on} + T_{off} - \eta \\
+    RTT & \ge & T_{off} - D \\
+    RTT & < & T_{off} + T_{on} - D \\
+    RTT & \ge & T_{off} + T_{on} - D - \tau \\
+    RTT & < & 2T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{(T_{off} + T_{on} - RTT - D)(R_{M2} - C + R_{on})}{2} \\
+    R & = & C - R_{avg}\frac{2T_{on} + 2D + \tau - \eta}{2T_{on}} \\
+    R_{M2} & = & C + \frac{R_{on}(T_{off} + T_{on} - \tau - RTT - D)}{\tau}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 31}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & \ge & T_{on} \\
+    RTT & < & T_{on} + T_{off} \\
+    RTT & \ge & T_{on} + T_{off} - \eta \\
+    RTT & < & 2T_{on} + T_{off} - \eta \\
+    RTT & \ge & T_{off} - D \\
+    RTT & < & T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{(RTT + \eta - T_{on} - T_{off})(R_{M1} - C + R_{on})}{2} + 
+    \frac{\tau R_{on}}{2} + R_{on} (T_{off} + T_{on} - RTT - D - \tau) \\
+    R & = & C - R_{avg}\frac{2T_{on} + 2D + \tau - \eta}{2T_{on}} \\
+    R_{M1} & = & C + \frac{R_{on}(RTT - T_{off} - T_{on})}{\eta}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 32}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & \ge & T_{on} \\
+    RTT & < & T_{on} + T_{off} \\
+    RTT & \ge & T_{on} + T_{off} - \eta \\
+    RTT & < & 2T_{on} + T_{off} - \eta \\
+    RTT & \ge & T_{off} - D \\
+    RTT & < & T_{off} + T_{on} - D \\
+    RTT & \ge & T_{off} + T_{on} - D - \tau \\
+    RTT & < & 2T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{(RTT + \eta - T_{on} - T_{off})(R_{M1} - C + R_{on})}{2} + 
+    \frac{(T_{off} + T_{on} - RTT - D)(R_{M2} - C + R_{on})}{2} \\
+    R & = & C - R_{avg}\frac{2T_{on} + 2D + \tau - \eta}{2T_{on}} \\
+    R_{M1} & = & C + \frac{R_{on} (RTT - T_{off} - T_{on})}{\eta} \\
+    R_{M2} & = & C + \frac{R_{on} (T_{off} + T_{on} - \tau - RTT - D)}{\tau}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 33}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & \ge & T_{on} \\
+    RTT & < & T_{on} + T_{off} \\
+    RTT & \ge & T_{on} + T_{off} - \eta \\
+    RTT & < & 2T_{on} + T_{off} - \eta \\
+    RTT & \ge & T_{off} + T_{on} - D \\
+    RTT & < & 2T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{(RTT + \eta - T_{on} - T_{off})(R_{M1} - C + R_{on})}{2} \\
+    R & = & C - R_{avg}\frac{2T_{on} + 2D + \tau - \eta}{2T_{on}} \\
+    R_{M1} & = & C + \frac{R_{on}(RTT - T_{off} - T_{on})}{\eta}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 34}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & < & T_{on} \\
+    RTT & \ge & T_{on} + T_{off} - \eta \\
+    RTT & < & 2T_{on} + T_{off} - \eta \\
+    RTT & \ge & T_{off} - D \\
+    RTT & < & T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{(RTT + \eta - T_{on} - T_{off})(R_{M1} - C + R_{on})}{2} + 
+    \frac{\tau R_{on}}{2} + R_{on}(T_{off} - D - \tau) \\ 
+    && + \frac{(2R_{on} + R_{M2} - C)(T_{on} - RTT)}{2} \\
+    R & = & C - R_{avg}\frac{2T_{on} + 2D + \tau - \eta}{2T_{on}} \\
+    R_{M1} & = & C + \frac{R_{on}(RTT - T_{off} - T_{on})}{\eta} \\
+    R_{M2} & = & C + \frac{R_{on}(RTT - T_{on})}{\eta}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 35}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & \ge & T_{on} \\
+    RTT & < & T_{on} + T_{off} + \eta \\
+    RTT & < & T_{off} - D \\
+    RTT & \ge & T_{off} + T_{on} - D - \tau \\
+    RTT & < & 2T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{(R_{M1} + R_{M2} - 2C + 2R_{on})T_{on}}{2} \\
+    R & = & C - R_{avg}\frac{2T_{on} + 2D + \tau - \eta}{2T_{on}} \\
+    R_{M1} & = & C + \frac{R_{on}(T_{off} - \tau - D - RTT)}{\tau} \\
+    R_{M2} & = & C + \frac{R_{on}(T_{off} + T_{on} - \tau - D - RTT)}{\tau}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 36}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & \ge & T_{on} \\
+    RTT & < & T_{on} + T_{off} \\
+    RTT & \ge & 2T_{on} + T_{off} - \eta \\
+    RTT & < & 2T_{on} + 2T_{off} - \eta \\
+    RTT & \ge & T_{off} + T_{on} - D \\
+    RTT & < & 2T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{(R_{M1} + R_{M2} - 2C + 2R_{on})T_{on}}{2} \\
+    R & = & C - R_{avg}\frac{2T_{on} + 2D + \tau - \eta}{2T_{on}} \\
+    R_{M1} & = & C + \frac{R_{on}(RTT - T_{off} - T_{on})}{\eta} \\
+    R_{M2} & = & C + \frac{R_{on}(RTT - T_{off} - 2T_{on})}{\eta}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 37}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & < & T_{on} \\
+    RTT & < & T_{off} - D \\
+    RTT & \ge & T_{off} - D - \tau \\
+    RTT & < & T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{R_{M1} - C + 2R_{on})(RTT + D + \tau - T_{off})}{2} +
+    R_{on}(T_{off} - D - \tau) \\ 
+    && + \frac{(R_{on} + R_{M2} - C + R_{on})*T_{on} - RTT)}{2} \\
+    R & = & \left (\frac{C + R_L}{2} \right ) \left (\frac{T_{on} + D + \tau}
+    {T_{on} + T_{off}} \right ) + C \left (\frac{T_{off} - D - \tau}
+    {T_{on} + T_{off}} \right ) \\
+    R_{M1} & = & \frac{D R_L - C RTT + R_L RTT + C T_{off} - R_L T_{off} 
+    R_L \tau - C D}{\tau} \\
+    R_{M2} & = & C + \frac{R_{on}(RTT -T_{on})}{\eta} \\
+    R_L & = & C - \frac{R_{on}(T_{on} + D)}{\eta}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 38}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & < & T_{on} \\
+    RTT & \ge & T_{off} - D \\
+    RTT & < & T_{on} + T_{off} - D \\
+    RTT & < & T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{(R_{M1} -2C + 2R_{on} + R_L)(RTT + D - T_{off})}{2} + 
+    \frac{(R_L - C + 2R_{on})\tau}{2} \\ 
+    && + R_{on}(T_{off} - D - \tau) + 
+    \frac{(2R_{on} + R_{M2} - C)(T_{on} - RTT)}{2} \\ 
+    R & = & \left (\frac{C + R_L}{2} \right ) \left (\frac{T_{on} + D + \tau}
+    {T_{on} + T_{off}} \right ) + C \left (\frac{T_{off} - D - \tau}
+    {T_{on} + T_{off}} \right ) \\
+    R_{M1} & = & C + \frac{R_{on}(RTT - T_{off} - T_{on})}{\eta} \\
+    R_{M2} & = & C + \frac{R_{on} (RTT - T_{on})}{\eta} \\
+    R_L & = & C - \frac{R_{on}(T_{on} + D)}{\eta}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 39}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & \ge & T_{on} \\
+    RTT & < & T_{off} - D \\
+    RTT & < & T_{off} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & R_{on} T_{on} \\
+    R & = & \left (\frac{C + R_L}{2} \right ) \left (\frac{T_{on} + D + \tau}
+    {T_{on} + T_{off}} \right ) + C \left (\frac{T_{off} - D - \tau}
+    {T_{on} + T_{off}} \right ) \\
+    R_L & = & C - \frac{R_{on}(T_{on} + D)}{\eta}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 40}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & \ge & T_{on} \\
+    RTT & < & T_{on} + T_{off} \\
+    RTT & \ge & T_{off} - D \\
+    RTT & < & T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{(R_{M1} - 2C + R_L + 2R_{on})(RTT + D - T_{off})}{2} +
+    \frac{(R_L - C + 2R_{on})\tau}{2} \\
+    && + R_{on}(T_{off} + T_{on} - RTT - D - \tau) \\
+    R & = & \left (\frac{C + R_L}{2} \right ) \left (\frac{T_{on} + D + \tau}
+    {T_{on} + T_{off}} \right ) + C \left (\frac{T_{off} - D - \tau}
+    {T_{on} + T_{off}} \right ) \\
+    R_{M1} & = & C + \frac{R_{on}(RTT - T_{off} - T_{on})}{\eta} \\
+    R_L & = & C - \frac{R_{on}(T_{on} + D)}{\eta}
+  \end{IEEEeqnarray*}
+
+\subsection{Case 41}
+  Conditions:
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & \ge & T_{on} \\
+    RTT & < & T_{on} + T_{off} \\
+    RTT & \ge & T_{on} + T_{off} - \eta \\
+    RTT & < & 2T_{on} + T_{off} - \eta \\
+    RTT & \ge & T_{off} - D \\
+    RTT & < & T_{off} + T_{on} - D - \tau
+  \end{IEEEeqnarray*}
+  Equations:
+  \begin{IEEEeqnarray*}{rCl}
+    Q & = & \frac{(RTT + \eta - T_{on} - T_{off})(R_{M1} - C + R_{on})}{2} + 
+    \frac{\tau R_{on}}{2} + R_{on} (T_{off} + T_{on} - RTT - D - \tau) \\
+    R & = & C - R_{avg}\frac{2T_{on} + 2D + \tau - \eta}{2T_{on}} \\
+    R_{M1} & = & C + \frac{R_{on}(RTT - T_{off} - T_{on})}{\eta}
+  \end{IEEEeqnarray*}
