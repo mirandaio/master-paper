@@ -7,7 +7,7 @@
   sending any data. $Ron$ is the rate at which the cross traffic is sending 
   data during $T_{on}$ and $C$ is the transmission capacity of the bottleneck 
   link.
-  \begin{figure}[hbp]
+  \begin{figure}[htb]
     \centering
     \includegraphics[width=0.9\textwidth]{img/cross-traffic.png}
     \caption{The on-off cross traffic model}
@@ -18,22 +18,20 @@
   enough time to adapt its sending rate to the available bandwidth. Figure 
   \ref{large-burst} shows the interaction between Rapid throughput and a 
   large-scale burst on-off cross traffic, where $D$ is the queue drain time.
-  \begin{figure}[hbp]
+  \begin{figure}[htb]
     \centering
     \includegraphics[width=0.9\textwidth]{img/large-burst.pdf}
-    \caption{Rapid send rate and on-off cross traffic}
+    \caption{Rapid send rate and on-off cross traffic interaction}
     \label{large-burst}
   \end{figure}
   
-  A large-scale burst is occurs when the following inequalities are true.
-  \begin{equation}
-    T_{on} + D \ge \eta
-    \label{enough-to-decrease}
-  \end{equation}
-  \begin{equation}
-    T_{off} - D \ge \tau
+  A large-scale burst occurs when the following inequalities are true.
+  \begin{IEEEeqnarray}{rCl}
+    T_{on} + D & \ge & \eta \IEEEyessubnumber
+    \label{enough-to-decrease} \\
+    T_{off} - D & \ge & \tau \IEEEyessubnumber
     \label{enough-to-increase}
-  \end{equation}
+  \end{IEEEeqnarray}
   Inequality \eqref{enough-to-decrease} is true when Rapid has enough time 
   to decrease its sending rate to $C - R_{on}$. On the other hand, inequality 
   \eqref{enough-to-increase} is true when Rapid has enough time to increase 
@@ -52,16 +50,18 @@
     \label{ravg}
   \end{equation}
 
-  Figure \ref{large-burst} is one of the 16 different cases of large-scale 
-  bursts. In addition to the large-scale inequalities \ref{enough-to-decrease} 
+  Figure \ref{large-burst} shows one of the 16 different cases of large-scale 
+  bursts. To find these 16 large-scale cases, we have tried different sizes 
+  of $RTT$, $\tau$, and $\eta$ with respect to the sizes of $T_{on}$ and 
+  $T_{off}$. We have made sure that these 16 cases are mutually exclusive. 
+  However, we are not sure if these cases are exhaustive. In addition to the 
+  large-scale inequalities \ref{enough-to-decrease} 
   and \ref{enough-to-increase}, the following inequalities also need to be true 
   for the particular case shown in Figure \ref{large-burst} to occur.
-  \begin{equation}
-    RTT < T_{on} - \eta
-  \end{equation}
-  \begin{equation}
-    RTT < T_{off} - D - \tau
-  \end{equation}
+  \begin{IEEEeqnarray*}{rCl}
+    RTT & < & T_{on} - \eta \\
+    RTT & < & T_{off} - D - \tau
+  \end{IEEEeqnarray*}
   For the case shown in Figure \ref{large-burst}, the queue that accumulates 
   at the bottleneck link when the sending rate of both Rapid and the cross 
   traffic exceed the bottleneck capacity is given by equation 

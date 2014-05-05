@@ -1,8 +1,14 @@
 \section{Small-Scale Bursts}
-  In total there are 25 different small-scale burst cases that have been found.
+  In this section we analyze small-scale bursts in the cross traffic. We 
+  define small-scale bursts as on-off cross traffic were Rapid either has no 
+  time to increase or decrease its sending rate to the available bandwidth. In 
+  total there are 25 different small-scale burst cases that have been found. 
+  Again, to find these small-scale cases, we have tried different sizes of 
+  $RTT$, $\tau$, and $\eta$ and have made sure these cases are mutually 
+  exclusive. However, we are not sure if they are exhaustive.
   These small-scale cases can be classified into three groups depending on 
-  whether the Rapid sending rate can converge on time to the available 
-  bandwidth.
+  whether Rapid has not enough time to increase or decrease its sending rate 
+  to the available bandwidth.
 
   \begin{enumerate}
 
@@ -10,17 +16,19 @@
     not enough time to decrease its sending rate to $C - R_{on}$ the following 
     equations are true:
     \begin{IEEEeqnarray}{rCl}
-      T_{off} - D & \ge & \tau \label{tau1} \\
-      T_{on} + D & < & \eta \label{eta1}
+      T_{on} + D & < & \eta \IEEEyessubnumber
+      \label{eta1} \\
+      T_{off} - D & \ge & \tau \IEEEyessubnumber
+      \label{tau1}
     \end{IEEEeqnarray}
-
-    Figure \ref{small1} shows plots of the Rapid send rate and the cross 
-    traffic send rate when inequalities \eqref{tau1} and \eqref{eta1} are 
-    true. In the figure, $D$ is the queueing delay, $R_L$ is the lowest 
-    sending rate, $R_{M1}$ is the instantaneous send rate of Rapid when the 
-    cross traffic burst begins, and $R_{M2}$ is the instantaneous send rate of 
-    Rapid when the cross traffic ends. For these cases, the Rapid throughput 
-    can be expressed as 
+    Inequality \eqref{eta1} is true when Rapid does not have enough to decrease
+    its sending rate to $C - R_{on}$. Figure \ref{small1} shows plots of the 
+    Rapid send rate and the cross traffic send rate when inequalities 
+    \eqref{eta1} and \eqref{tau1} are true. In the figure, $D$ is the queueing 
+    delay, $R_L$ is the lowest sending rate, $R_{M1}$ is the instantaneous 
+    send rate of Rapid when the cross traffic burst begins, and $R_{M2}$ is 
+    the instantaneous send rate of Rapid when the cross traffic ends. For 
+    these cases, the Rapid throughput can be expressed as 
     \begin{equation}
       R = \left (\frac{C + R_L}{2} \right ) \left (\frac{T_{on} + D + 
       \tau}{T_{on} + T_{off}} \right ) + C \left (\frac{T_{off} - D - \tau}
@@ -28,7 +36,7 @@
       \label{rsmall1}
     \end{equation}
 
-    \begin{figure}[h]
+    \begin{figure}[htb]
       \centering
       \includegraphics[width=0.9\textwidth]{img/small-burst1.pdf}
       \caption{Small-scale burst}
@@ -37,11 +45,11 @@
 
     The following set of inequalities also have to be true in order for the 
     particular case shown in Figure \ref{small1} to occur:
-    \begin{IEEEeqnarray}{rCl}
+    \begin{IEEEeqnarray*}{rCl}
       RTT & < & T_{on} \\
       RTT & \ge & T_{off} - D \\
       RTT & < & T_{on} + T_{off} - D - \tau
-    \end{IEEEeqnarray}
+    \end{IEEEeqnarray*}
     
     From Figure \ref{small1} we can derive expressions for $D$, $R_{M1}$, 
     $R_{M2}$, and $R_L$:
@@ -67,25 +75,27 @@
     $C$ but has enough time to decrease its sending rate to $C - R_{on}$ the 
     following equations are true:
     \begin{IEEEeqnarray}{rCl}
-      T_{off} - D < \tau \label{tau2} \\
-      T_{on} + D \ge \eta \label{eta2}
-    \end{IEEEeqnarray}
+      T_{on} + D & \ge & \eta  \IEEEyessubnumber
+      \label{eta2} \\
+      T_{off} - D & < & \tau \IEEEyessubnumber
+      \label{tau2} 
+   \end{IEEEeqnarray}
 
-    Figure \ref{small2} shows plots of the Rapid send rate and the cross 
-    traffic send rate when inequalities \eqref{tau2} and \eqref{eta2} are 
-    true. In the figure, $D$ is the queueing delay, $R_H$ is the highest 
-    sending rate, $R_{M1}$ is the instantaneous send rate of Rapid when the 
-    cross traffic burst begins, and $R_{M2}$ is the instantaneous send rate of 
-    Rapid when the cross traffic ends. For these cases, the Rapid throughput 
-    can be expressed as
+    Inequality \eqref{tau2} is true when Rapid does not have enough time to 
+    increase its sending rate to $C$. Figure \ref{small2} shows plots of the 
+    Rapid send rate and the cross traffic send rate when inequalities 
+    \eqref{eta2} and \eqref{tau2} are true. In the figure, $D$ is the queueing 
+    delay, $R_H$ is the highest sending rate, $R_{M1}$ is the instantaneous 
+    send rate of Rapid when the cross traffic burst begins, and $R_{M2}$ is 
+    the instantaneous send rate of Rapid when the cross traffic ends. For 
+    these cases, the Rapid throughput can be expressed as
     \begin{IEEEeqnarray}{rCl}
       R & = & \left ( \frac{R_H + C - R_{on}}{2} \right ) \left ( \frac{T_{off} 
       - D + \eta}{T_{on} + T_{off}} \right ) \nonumber \\
       && + (C - R_{on}) \frac{T_{on} + D - \eta}{T_{on} + T_{off}}
       \label{rsmall2}
-    \end{IEEEeqnarray}
-    
-    \begin{figure}[h]
+    \end{IEEEeqnarray} 
+    \begin{figure}[htb]
       \centering
       \includegraphics[width=0.9\textwidth]{img/small-burst2.pdf}
       \caption{Small-scale burst}
@@ -94,12 +104,12 @@
 
     The following set of inequalities also have to be true in order for the 
     particular case shown in Figure \ref{small2} to occur:
-    \begin{IEEEeqnarray}{rCl}
+    \begin{IEEEeqnarray*}{rCl}
       RTT & < & T_{on} \\
       RTT & \ge & T_{on} - \eta \\
       RTT & < & T_{on} + T_{off} - \eta \\
       RTT & < & T_{off} - D
-    \end{IEEEeqnarray}
+    \end{IEEEeqnarray*}
 
     From Figure \ref{small2} we can derive expressions for $D$, $R_{M1}$, 
     $R_{M2}$, and $R_H$:
@@ -126,13 +136,15 @@
     $C$ and does not have enough time to decrease its sending rate to 
     $C - R_{on}$ the following equations are true:
     \begin{IEEEeqnarray}{rCl}
-      T_{off} - D & < & \tau \label{tau3} \\
-      T_{on} + D & < & \eta \label{eta3}
-    \end{IEEEeqnarray}
+      T_{on} + D & < & \eta \IEEEyessubnumber
+      \label{eta3} \\
+      T_{off} - D & < & \tau \IEEEyessubnumber
+      \label{tau3}
+   \end{IEEEeqnarray}
 
     Figure \ref{small3} shows plots of the Rapid send rate and the cross 
-    traffic send rate when inequalities \eqref{tau3} and \eqref{eta3} are 
-    true. In figure, $D$ is the queueing delay, $R_L$ is the lowest sending 
+    traffic send rate when inequalities \eqref{eta3} and \eqref{tau3} are 
+    true. In the figure, $D$ is the queueing delay, $R_L$ is the lowest sending 
     rate, $R_H$ is the highest sending rate, $R_{M1}$ is the instantaneous 
     send rate of Rapid when the cross traffic burst begins, and $R_{M2}$ is 
     the instantaneous send rate of Rapid when the cross traffic ends. For 
@@ -142,7 +154,7 @@
       \label{rsmall3}
     \end{equation}
     
-    \begin{figure}[h]
+    \begin{figure}[htb]
       \centering
       \includegraphics[width=0.9\textwidth]{img/small-burst3.pdf}
       \caption{Small-scale burst}
@@ -151,10 +163,10 @@
 
     The following set of inequalities also have to be true in order for the 
     particular case shown in Figure \ref{small3} to occur:
-    \begin{IEEEeqnarray}{rCl}
+    \begin{IEEEeqnarray*}{rCl}
       RTT & < & T_{on} \\
       RTT & < & T_{off} - D \\
-    \end{IEEEeqnarray}
+    \end{IEEEeqnarray*}
 
     From Figure \ref{small3} we can derive expressions for $D$, $R_{M1}$, 
     $R_{M2}$, $R_L$, and $R_H$:

@@ -6,16 +6,20 @@
     \label{util}
   \end{equation}
   Replacing equation \eqref{ravg} for $R_{avg}$ and the equations for $R$ 
-  derived in section 2 and 3, the link utilization can be expressed as a 
+  derived in sections 2 and 3, the link utilization $U$ can be expressed as a 
   function of $T_{on}$, $T_{off}$, $R_{on}$, $C$, $\tau$, $\eta$, and $RTT$. 
+  
   Figure \ref{utilvsrtt} shows a plot of the utilization $U$ as a function of 
   $RTT$ after replacing $T_{on} = 25 ms$, $T_{off} = 100 ms$, 
-  $R_{on} = 500 Mbps$, $C = 1Gbps$, $\tau = 7.5 ms$, and $\eta = 7 ms$. The 
+  $R_{on} = 500 Mbps$, $C = 1Gbps$, $\tau = 7.5 ms$, and $\eta = 7 ms$. Each 
+  colored section of the utilization curve corresponds to one of the cases 
+  derived in sections 2 and 3 whose inequalities are true for the range 
+  of $RTT$ values where the colored section is being plotted. The 
   horizontal line around 0.95 is the worst case utilization value obtained 
   using the models derived in \cite{Lovewell2011-Noise-TR}. If we treat 
   $RTT$ as a random variable, we can use the utilization function of Figure 
   \ref{utilvsrtt} to compute the expected value of utilization.
-  \begin{figure}[h]
+  \begin{figure}[!htb]
     \centering
     \includegraphics[width=0.9\textwidth]{img/utilvsrtt.pdf}
     \caption{Utilization vs RTT}
@@ -37,8 +41,9 @@
     \item is proportional to the ratio $\frac{T_{off}}{T_{on}}$.
   \end{enumerate}
 
-  For the remainder of this section, we treat $RTT$ as a uniform random 
-  variable with probability density function:
+  In this paper, we extend the analysis done in \cite{Lovewell2011-Noise-TR} 
+  by treating $RTT$ as a uniform random variable with probability density 
+  function:
   \begin{equation}
     f_{RTT}(RTT) =
     \begin{cases}
@@ -64,8 +69,7 @@
       to alleviate the loss in expected utilization due to cross-traffic 
       burstiness.
     \end{itemize}
-    \newpage
-    \begin{figure}[h]
+    \begin{figure}[!htb]
       \centering
       \includegraphics[width=0.9\textwidth]{img/rtttaueta.pdf}
       \caption{Role of $\tau - \eta$}
@@ -84,13 +88,13 @@
       $\frac{R_{avg}}{C}$. This trend is more pronounced for smaller values of 
       $\frac{T_{on}}{T_{off}}$.
       \item For a given combination of $T_{on}$ and $T_{off}$, Rapid performs 
-      better when bursts are "small-scale" ($\tau$, $\eta$ are sufficiently 
+      better when bursts are ``small-scale'' ($\tau$, $\eta$ are sufficiently 
       larger than $T_{on}$, $T_{off}$). As long as the bursts are 
-      small-scale, the value of $\tau$ dpes not influence Rapid performance 
+      small-scale, the value of $\tau$ does not influence Rapid performance 
       much. Using large value of $\tau$ and $\eta$ can help ensure the 
-      bursts are relatively "small" in scale and Rapid performs well.
+      bursts are relatively ``small'' in scale and Rapid performs well.
     \end{itemize}
-    \begin{figure}[h]
+    \begin{figure}[!htb]
       \centering
       \includegraphics[width=0.9\textwidth]{img/rttravgc.pdf}
       \caption{Role of $\frac{R_{avg}}{C}$}
@@ -114,7 +118,7 @@
       burstiness does not significantly influence Rapid's performance, but the 
       relative durations of burst and idle periods do.
     \end{itemize}
-    \begin{figure}[h]
+    \begin{figure}[!htb]
       \centering
       \includegraphics[width=0.9\textwidth]{img/rtttontoff.pdf}
       \caption{Role of $\frac{T_{on}}{T_{off}}$}

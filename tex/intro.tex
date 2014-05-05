@@ -8,21 +8,24 @@
 
   The excellent adaptability of the paradigm to dynamically varying 
   bandwidth raises concern about its sensitivity to transient short-scale 
-  burstiness in the cross traffic encountered on congested links. Thus, in 
+  burstiness in the cross traffic encountered on congested links. This concern 
+  raises the question: \emph{to what extent does cross traffic burstiness 
+  impact the efficiency of the packet-scale paradigm?} Thus, in 
   this paper, we continue the work done in \cite{Lovewell2011-Noise-TR} where 
   a simple periodic on-off model is used for the cross traffic. We extend the 
   analysis done in \cite{Lovewell2011-Noise-TR} by considering two scenarios.
-  In one scenario, the cross traffic parameters are held constant and the RTT 
+  In one scenario, the cross traffic parameters are held constant and the 
+  $RTT$ 
   of the Rapid flow is treated as a random variable. In the second 
-  scenario, the RTT of the Rapid flow is held constant throughout the 
-  connection and the cross traffic parameters are treated as random variables. 
-  It is important to consider random RTTs and random cross traffic parameters 
+  scenario, the $RTT$ of the Rapid flow is held constant and the cross traffic 
+  parameters are treated as random variables. 
+  It is important to consider random $RTT$s and random cross traffic parameters 
   because it better approximates the scenarios found in real networks.
 
   In the rest of this paper, we develop the analysis for large-scale and 
   small-scale burts in sections 2 and 3 respectively. In section 4 we use 
-  the derived equations for the Rapid throughput to study the performace of 
+  the derived models for the Rapid throughput to study the performace of 
   the paradigm under different conditions and settings when the RTT is treated 
   as a uniform random variable. In section 5, we treat the parameters that 
   define the on-off cross traffic as random variables and study the 
-  performance of the parameters. We conclude in section 6.
+  performance of the paradigm. We conclude in section 6.
