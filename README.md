@@ -1,4 +1,4 @@
-thesis
-======
+Master's paper
+==============
 
-Master's thesis
+Master's paper
